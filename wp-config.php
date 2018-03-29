@@ -90,6 +90,25 @@ define( 'DISABLE_WP_CRON', true );
  */
 define( 'WP_CONTENT_DIR', dirname( __FILE__ ) . '/content' );
 
+/**
+ * Force site location.
+ */
+define( 'WP_HOME', 'https://' . $_SERVER['HOST'] );
+define( 'WP_SITEURL', 'https://' . $_SERVER['HOST'] );
+
+/**
+ * Enable and configure multisite.
+ */
+define( 'WP_ALLOW_MULTISITE', true );
+if (isset($_SERVER['MULTISITE']) ? $_SERVER['MULTISITE'] === 'true' : false) {
+	define( 'MULTISITE', true );
+	define( 'SUBDOMAIN_INSTALL', true );
+	define( 'DOMAIN_CURRENT_SITE', $_SERVER['HOST'] );
+	define( 'PATH_CURRENT_SITE', '/' );
+	define( 'SITE_ID_CURRENT_SITE', 1 );
+	define( 'BLOG_ID_CURRENT_SITE', 1 );
+}
+
 /* That's all, stop editing! Happy blogging. */
 
 /** Absolute path to the WordPress directory. */

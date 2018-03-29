@@ -18,6 +18,8 @@ env_variables:
   NONCE_SALT: 'put your unique phrase here'
   TABLE_PREFIX: 'wp_'
   WP_DEBUG: 'false'
+  MULTISITE: 'true'
+  HOST: ''
 
 handlers:
   - url: /wp-content/(.*\.(css|js|jpg|jpeg|png|gif|svg|ico|eot|otf|ttf|woff))$
