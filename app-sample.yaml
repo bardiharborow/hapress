@@ -18,3 +18,23 @@ env_variables:
   NONCE_SALT: 'put your unique phrase here'
   TABLE_PREFIX: 'wp_'
   WP_DEBUG: 'false'
+
+handlers:
+  - url: /wp-content/(.*\.(css|js|jpg|jpeg|png|gif|svg|ico|eot|otf|ttf|woff))$
+    static_files: content/\1
+    upload: content/.*\.(css|js|jpg|jpeg|png|gif|svg|ico|eot|otf|ttf|woff)$
+    application_readable: true
+
+  - url: /(.*\.(css|js|jpg|jpeg|png|gif|svg|ico|eot|otf|ttf|woff))$
+    static_files: wordpress/\1
+    upload: wordpress/.*\.(css|js|jpg|jpeg|png|gif|svg|ico|eot|otf|ttf|woff)$
+    application_readable: true
+
+  - url: /wp-admin/(.+/)?
+    script: wordpress/wp-admin/\1index.php
+
+  - url: /(.+).php
+    script: wordpress/\1.php
+
+  - url: /.*
+    script: wordpress/index.php
