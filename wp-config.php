@@ -76,6 +76,11 @@ $table_prefix = isset($_SERVER['TABLE_PREFIX']) ? $_SERVER['TABLE_PREFIX'] : 'wp
 define( 'WP_DEBUG', isset($_SERVER['WP_DEBUG']) ? $_SERVER['WP_DEBUG'] === 'true' : false );
 
 /**
+ * The Google App Engine file system is read-only.
+ */
+define( 'DISALLOW_FILE_MODS', true );
+
+/**
  * Replace built-in cron with cron.yaml.
  */
 define( 'DISABLE_WP_CRON', true );
