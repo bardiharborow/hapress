@@ -75,6 +75,11 @@ $table_prefix = isset($_SERVER['TABLE_PREFIX']) ? $_SERVER['TABLE_PREFIX'] : 'wp
  */
 define( 'WP_DEBUG', isset($_SERVER['WP_DEBUG']) ? $_SERVER['WP_DEBUG'] === 'true' : false );
 
+/**
+ * Replace built-in cron with cron.yaml.
+ */
+define( 'DISABLE_WP_CRON', true );
+
 /* That's all, stop editing! Happy blogging. */
 
 /** Absolute path to the WordPress directory. */

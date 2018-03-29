@@ -1,0 +1,4 @@
+cron:
+- description: "WordPress scheduled maintenance"
+  url: /wp-cron.php
+  schedule: every 1 hour
