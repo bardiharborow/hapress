@@ -85,6 +85,11 @@ define( 'DISALLOW_FILE_MODS', true );
  */
 define( 'DISABLE_WP_CRON', true );
 
+/**
+ * Move the WordPress content directory up one level.
+ */
+define( 'WP_CONTENT_DIR', dirname( __FILE__ ) . '/content' );
+
 /* That's all, stop editing! Happy blogging. */
 
 /** Absolute path to the WordPress directory. */
