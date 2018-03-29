@@ -109,6 +109,12 @@ if (isset($_SERVER['MULTISITE']) ? $_SERVER['MULTISITE'] === 'true' : false) {
 	define( 'BLOG_ID_CURRENT_SITE', 1 );
 }
 
+/**
+  * Ensure that cached transients are effectively reset when a new app version
+  * is deployed by rolling the cache namespace.
+	*/
+define( 'WP_CACHE_KEY_SALT', $_SERVER['CURRENT_VERSION_ID'] );
+
 /* That's all, stop editing! Happy blogging. */
 
 /** Absolute path to the WordPress directory. */
