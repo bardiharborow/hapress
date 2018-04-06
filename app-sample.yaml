@@ -20,6 +20,9 @@ env_variables:
   WP_DEBUG: 'false'
   MULTISITE: 'true'
   HOST: ''
+  GCS_BUCKET: ''
+  EMAIL_NAME: ''
+  EMAIL_FROM: ''
 
 handlers:
   - url: /wp-content/(.*\.(css|js|jpg|jpeg|png|gif|svg|ico|eot|otf|ttf|woff))$
